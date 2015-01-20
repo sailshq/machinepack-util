@@ -1,0 +1,26 @@
+{
+  "name": "machinepack-utilities",
+  "version": "0.1.0",
+  "description": "Utilities for working with arrays, dictionaries, strings, etc.",
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/mocha -b"
+  },
+  "keywords": [
+    "Utilities",
+    "machines",
+    "machinepack"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies":{
+    "machine": "^1.1.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  },
+  "machinepack": {
+    "friendlyName": "Utilities",
+    "machineDir": "machines/",
+    "machines": []
+  }
+}
