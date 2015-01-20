@@ -1,5 +1,5 @@
 {
-  "name": "machinepack-utilities",
+  "name": "machinepack-util",
   "version": "0.1.0",
   "description": "Utilities for working with arrays, dictionaries, strings, etc.",
   "scripts": {
@@ -21,6 +21,16 @@
   "machinepack": {
     "friendlyName": "Utilities",
     "machineDir": "machines/",
-    "machines": []
+    "machines": [
+      "convert-to-camel-case",
+      "convert-to-number",
+      "convert-to-number",
+      "create-dictionary",
+      "create-array",
+      "generate-unique-token",
+      "index-of",
+      "merge",
+      "search-using-regexp"
+    ]
   }
 }
