@@ -1,18 +1,18 @@
 ![](http://node-machine.org/images/machine-anthropomorph-for-white-bg.png)
 
-# machinepack-utilities
+# machinepack-util
 
 Utilities for working with arrays, dictionaries, strings, etc.
 
 ### Installation
 
 ```sh
-$ npm install machinepack-utilities
+$ npm install machinepack-util
 ```
 
 ### Usage
 
-For the latest usage documentation and status of this module, see [http://node-machine.org/machinepack-utilities](http://node-machine.org/machinepack-utilities).
+For the latest usage documentation and status of this module, see [http://node-machine.org/machinepack-util](http://node-machine.org/machinepack-util).
 
 ### About
 
