@@ -24,13 +24,13 @@
     "machines": [
       "convert-to-camel-case",
       "convert-to-number",
-      "convert-to-number",
       "create-dictionary",
       "create-array",
       "generate-unique-token",
       "index-of",
       "merge",
-      "search-using-regexp"
+      "search-using-regexp",
+      "generate-random-integer"
     ]
   }
 }
