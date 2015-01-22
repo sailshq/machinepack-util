@@ -23,6 +23,7 @@
     "machineDir": "machines/",
     "machines": [
       "convert-to-camel-case",
+      "convert-to-string",
       "convert-to-number",
       "create-dictionary",
       "create-array",
