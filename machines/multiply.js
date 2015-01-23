@@ -4,18 +4,16 @@ module.exports = {
   extendedDescription: '',
   sync: true,
   inputs: {
-    inputs: {
-      a: {
-        description: 'The first number.',
-        example: 2,
-        required: true
-      },
-      b: {
-        description: 'The second number.',
-        example: -10,
-        required: true
-      }
+    a: {
+      description: 'The first number.',
+      example: 2,
+      required: true
     },
+    b: {
+      description: 'The second number.',
+      example: -10,
+      required: true
+    }
   },
   defaultExit: 'success',
   exits: {
@@ -28,11 +26,7 @@ module.exports = {
     }
   },
   fn: function(inputs, exits) {
-    var product = 1;
-    for (var i=0;i<inputs.numbers.length;i++){
-      product = product * inputs.numbers[i];
-    }
-    return exits.success(product);
+    return exits.success(inputs.a*inputs.b);
   },
 
 };
