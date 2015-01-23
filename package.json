@@ -33,7 +33,10 @@
       "search-using-regexp",
       "pick-random-item",
       "generate-random-integer",
-      "add"
+      "add",
+      "subtract",
+      "multiply",
+      "divide"
     ]
   }
 }
