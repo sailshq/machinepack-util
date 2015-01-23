@@ -22,7 +22,7 @@ module.exports = {
     },
     success: {
       description: 'Returns the product (a ✕ b)',
-      example: 4.2
+      example: -20
     }
   },
   fn: function(inputs, exits) {
