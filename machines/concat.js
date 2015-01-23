@@ -2,6 +2,7 @@ module.exports = {
   friendlyName: 'Concatenate',
   description: 'Concatenate an array of strings and return the combined version.',
   extendedDescription: '',
+  sync: true,
   inputs: {
     strings: {
       description: 'The array of strings to concatenate',
