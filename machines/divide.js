@@ -1,6 +1,6 @@
 module.exports = {
   friendlyName: 'Divide (÷)',
-  description: 'Compute the quotient of two numbers.',
+  description: 'Divide two numbers and return the quotient.',
   sync: true,
   inputs: {
     a: {
@@ -20,7 +20,7 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
     success: {
-      description: 'Done.',
+      description: 'Returns the quotient (a ÷ b)',
       example: 2.5
     }
   },

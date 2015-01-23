@@ -1,6 +1,6 @@
 module.exports = {
-  friendlyName: 'Add numbers',
-  description: 'Compute the sum of two numbers.',
+  friendlyName: 'Add (+)',
+  description: 'Add two numbers together and return the sum.',
   extendedDescription: '',
   sync: true,
   inputs: {
@@ -21,7 +21,7 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
     success: {
-      description: 'Done.',
+      description: 'Returns the sum (a + b)',
       example: 4.2
     }
   },

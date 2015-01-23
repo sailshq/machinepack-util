@@ -1,14 +1,21 @@
 module.exports = {
   friendlyName: 'Multiply (✕)',
-  description: 'Compute the product of an array of numbers.',
-  extendedDescription: '∏(i[0], i[1], ..., i[n])',
+  description: 'Multiply two numbers and return the product.',
+  extendedDescription: '',
   sync: true,
   inputs: {
-    numbers: {
-      description: 'The numbers to multiply.',
-      example: [-425.2],
-      required: true
-    }
+    inputs: {
+      a: {
+        description: 'The first number.',
+        example: 2,
+        required: true
+      },
+      b: {
+        description: 'The second number.',
+        example: -10,
+        required: true
+      }
+    },
   },
   defaultExit: 'success',
   exits: {
@@ -16,7 +23,7 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
     success: {
-      description: 'Done.',
+      description: 'Returns the product (a ✕ b)',
       example: 4.2
     }
   },

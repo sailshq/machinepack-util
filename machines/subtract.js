@@ -1,12 +1,17 @@
 module.exports = {
-  friendlyName: 'Multiply (✕)',
-  description: 'Compute the product of an array of numbers.',
-  extendedDescription: '∏(i[0], i[1], ..., i[n])',
+  friendlyName: 'Subtract (-)',
+  description: 'Subtract one number from another and return the difference.',
+  extendedDescription: '',
   sync: true,
   inputs: {
-    numbers: {
-      description: 'The numbers to multiply.',
-      example: [-425.2],
+    a: {
+      description: 'The number to subtract from.',
+      example: -20,
+      required: true
+    },
+    b: {
+      description: 'The number to subtract.',
+      example: 2.2,
       required: true
     }
   },
@@ -16,16 +21,12 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
     success: {
-      description: 'Done.',
-      example: 4.2
+      description: 'Returns the difference (a - b)',
+      example: -22.2
     }
   },
   fn: function(inputs, exits) {
-    var product = 1;
-    for (var i=0;i<inputs.numbers.length;i++){
-      product = product * inputs.numbers[i];
-    }
-    return exits.success(product);
+    return exits.success(inputs.a-inputs.b);
   },
 
 };
