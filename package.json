@@ -1,6 +1,6 @@
 {
   "name": "machinepack-util",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Utilities for working with arrays, dictionaries, strings, etc.",
   "scripts": {
     "test": "node ./node_modules/mocha/bin/mocha -b"
