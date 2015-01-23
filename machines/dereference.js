@@ -22,10 +22,10 @@ module.exports = {
     },
     success: {
       description: 'Returns the concatenated result.',
-      getExample: function (inputValues,env){
-        var subtree = inputValues.dictionary;
+      getExample: function (inputs,env){
+        var subtree = inputs.dictionary;
         try {
-          env._.each(inputValues.keypath.split('.'), function (subkey){
+          env._.each(inputs.keypath.split('.'), function (subkey){
             subtree = subtree[subkey];
           });
         }
@@ -37,9 +37,11 @@ module.exports = {
     }
   },
   fn: function(inputs, exits) {
-    var subtree = inputValues.dictionary;
+    var _ = require('lodash');
+
+    var subtree = inputs.dictionary;
     try {
-      env._.each(inputValues.keypath.split('.'), function (subkey){
+      _.each(inputs.keypath.split('.'), function (subkey){
         subtree = subtree[subkey];
       });
     }

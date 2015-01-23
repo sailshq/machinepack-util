@@ -13,7 +13,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "machine": "^2.0.4"
+    "machine": "^2.0.4",
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
     "mocha": "^2.1.0"
