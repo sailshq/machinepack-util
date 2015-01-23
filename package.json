@@ -36,7 +36,8 @@
       "add",
       "subtract",
       "multiply",
-      "divide"
+      "divide",
+      "concat"
     ]
   }
 }
