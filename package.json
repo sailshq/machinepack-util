@@ -32,7 +32,8 @@
       "merge",
       "search-using-regexp",
       "pick-random-item",
-      "generate-random-integer"
+      "generate-random-integer",
+      "add"
     ]
   }
 }
