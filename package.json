@@ -39,7 +39,8 @@
       "multiply",
       "divide",
       "concat",
-      "dereference"
+      "dereference",
+      "log"
     ]
   }
 }
