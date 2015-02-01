@@ -40,7 +40,8 @@
       "divide",
       "concat",
       "dereference",
-      "log"
+      "log",
+      "parse-json-dictionary"
     ]
   }
 }
