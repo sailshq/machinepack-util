@@ -20,6 +20,10 @@ module.exports = {
     error: {
       description: 'Unexpected error occurred.'
     },
+    couldNotParse: {
+      description: 'Could not parse provided string- must be a valid JSON string.',
+      extendedDescription: 'Oftentimes this error is a result of not using double-quotes.  Refer to the official JSON specification at http://www.json.org/ for more information.'
+    },
     success: {
       description: 'Done.',
       getExample: function (inputs){
@@ -28,7 +32,14 @@ module.exports = {
     }
   },
   fn: function(inputs, exits) {
-    return exits.success(JSON.parse(inputs.json));
+    var parsedJson;
+    try {
+      parsedJson = JSON.parse(inputs.json);
+    }
+    catch (e){
+      return exits.couldNotParse(e);
+    }
+    return exits.success(parsedJson);
   },
 
 };
