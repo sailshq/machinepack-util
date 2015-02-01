@@ -2,6 +2,7 @@ module.exports = {
   friendlyName: 'Convert to camel case',
   description: 'Build a camel case version of the specified dash-delimited string.',
   extendedDescription: 'Returns a version of the string with dashes removed, using medial capitalization to separate words instead. See http://en.wikipedia.org/wiki/CamelCase for more information.',
+  sync: true,
   inputs: {
     string: {
       example: 'foo-bar-baz',
