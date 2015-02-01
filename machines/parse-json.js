@@ -2,6 +2,7 @@ module.exports = {
   friendlyName: 'Parse JSON',
   description: 'Parse data from a JSON string.',
   extendedDescription: '',
+  sync: true,
   inputs: {
     json: {
       description: 'The JSON string to parse',
