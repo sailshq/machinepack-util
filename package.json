@@ -41,7 +41,7 @@
       "concat",
       "dereference",
       "log",
-      "parse-json-dictionary"
+      "parse-json"
     ]
   }
 }

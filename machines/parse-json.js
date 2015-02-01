@@ -1,6 +1,6 @@
 module.exports = {
-  friendlyName: 'Parse JSON object',
-  description: 'Parse an object from a JSON string.',
+  friendlyName: 'Parse JSON',
+  description: 'Parse data from a JSON string.',
   extendedDescription: '',
   inputs: {
     json: {
@@ -9,8 +9,8 @@ module.exports = {
       required: true
     },
     schema: {
-      description: 'An example of what the result object should look like.',
-      typeclass: 'dictionary',
+      description: 'An example of what the resulting data should look like.',
+      typeclass: '*',
       required: true
     }
   },
@@ -22,7 +22,7 @@ module.exports = {
     success: {
       description: 'Done.',
       getExample: function (inputs){
-        return inputs.schema || {};
+        return inputs.schema;
       }
     }
   },
