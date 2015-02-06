@@ -1,7 +1,8 @@
 module.exports = {
   friendlyName: 'Hash dictionary',
   description: 'Generate unique hash string from dictionary.',
-  extendedDescription: '',
+  sync: true,
+  extendedDescription: 'Uses the crypto module from Node core via `object-hash` on NPM (see http://npmjs.org/package/object-hash)',
   inputs: {
     dictionary: {
       typeclass: 'dictionary',
