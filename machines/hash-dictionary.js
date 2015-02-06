@@ -16,14 +16,14 @@ module.exports = {
     },
     success: {
       description: 'Done.',
-      example: 'b239c39-ab23851-13850be01-193104e81b19f'
+      example: 'e003c89cdf35cdf46d8239b4692436364b7259f9'
     }
   },
   fn: function(inputs, exits) {
 
     var hashFn = require('object-hash');
 
-    var hash = hashFn(getUniquelyIdentifyingObj(machine));
+    var hash = hashFn(inputs.dictionary);
     return exits.success(hash);
 
   },
