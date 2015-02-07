@@ -13,7 +13,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "machine": "^2.0.4",
+    "machine": "^3.0.0",
     "lodash": "^2.4.1",
     "hat": "0.0.3",
     "object-hash": "^0.5.0"
