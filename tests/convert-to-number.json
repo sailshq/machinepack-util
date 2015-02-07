@@ -1,0 +1,10 @@
+{
+  "machine": "convert-to-number",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

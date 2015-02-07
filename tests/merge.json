@@ -1,0 +1,10 @@
+{
+  "machine": "merge",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

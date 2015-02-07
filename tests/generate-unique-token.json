@@ -1,0 +1,10 @@
+{
+  "machine": "generate-unique-token",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

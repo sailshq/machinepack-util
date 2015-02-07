@@ -1,0 +1,10 @@
+{
+  "machine": "convert-to-string",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

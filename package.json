@@ -3,7 +3,7 @@
   "version": "0.8.1",
   "description": "Utilities for everyday tasks with arrays, dictionaries, strings, etc.",
   "scripts": {
-    "test": "node ./node_modules/mocha/bin/mocha -b"
+    "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
   },
   "keywords": [
     "Utilities",
@@ -23,7 +23,8 @@
     "url": "https://github.com/mikermcneil/machinepack-util.git"
   },
   "devDependencies": {
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "test-machinepack-mocha": "^0.2.2"
   },
   "machinepack": {
     "friendlyName": "Util",

@@ -1,0 +1,10 @@
+{
+  "machine": "divide",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "machine": "subtract",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

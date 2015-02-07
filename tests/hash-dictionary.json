@@ -1,0 +1,10 @@
+{
+  "machine": "hash-dictionary",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

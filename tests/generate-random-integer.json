@@ -1,0 +1,10 @@
+{
+  "machine": "generate-random-integer",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

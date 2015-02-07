@@ -1,0 +1,10 @@
+{
+  "machine": "convert-to-camel-case",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

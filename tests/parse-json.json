@@ -1,0 +1,10 @@
+{
+  "machine": "parse-json",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}
