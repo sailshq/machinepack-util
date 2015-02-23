@@ -4,7 +4,40 @@
     {
       "todo": true,
       "using": {},
-      "outcome": "success"
+      "outcome": "success",
+      "returns": ""
+    },
+    {
+      "todo": false,
+      "using": {
+        "a": "3",
+        "b": "4"
+      },
+      "outcome": "success",
+      "returns": "7"
+    },
+    {
+      "using": {
+        "a": "asdgasdgsdg",
+        "b": "3"
+      },
+      "outcome": "error",
+      "returns": {
+        "code": "E_MACHINE_RUNTIME_VALIDATION",
+        "machine": "add",
+        "reason": "`add` machine encountered 1 error(s) while validating runtime input values.",
+        "status": "400",
+        "errors": [
+          {
+            "errors": [
+              null,
+              {
+                "code": "E_COERCION"
+              }
+            ]
+          }
+        ]
+      }
     }
   ]
 }
