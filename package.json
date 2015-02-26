@@ -51,6 +51,7 @@
       "parse-json",
       "hash-dictionary",
       "build-alphanumeric-string"
-    ]
+    ],
+    "testsUrl": "https://travis-ci.org/mikermcneil/machinepack-utilities"
   }
 }

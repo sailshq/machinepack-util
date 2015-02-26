@@ -1,0 +1,10 @@
+{
+  "machine": "build-alphanumeric-string",
+  "expectations": [
+    {
+      "using": {},
+      "outcome": "success",
+      "returns": "6NXQ7U"
+    }
+  ]
+}
