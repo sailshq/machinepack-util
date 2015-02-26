@@ -2,9 +2,25 @@
   "machine": "build-alphanumeric-string",
   "expectations": [
     {
+      "todo": false,
       "using": {},
       "outcome": "success",
-      "returns": "6NXQ7U"
+      "returns": "R6WH6S"
+    },
+    {
+      "todo": false,
+      "using": {
+        "numChars": "3"
+      },
+      "outcome": "success",
+      "returns": "2WJ"
+    },
+    {
+      "using": {
+        "numChars": "30"
+      },
+      "outcome": "success",
+      "returns": "TCTYD7Q9SCVUNMIJCF1PAVUV6T21EM"
     }
   ]
 }
