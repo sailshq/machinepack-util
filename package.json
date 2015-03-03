@@ -1,6 +1,6 @@
 {
   "name": "machinepack-util",
-  "version": "0.8.5",
+  "version": "2.1.0",
   "description": "Utilities for everyday tasks with arrays, dictionaries, strings, etc.",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
@@ -41,6 +41,7 @@
       "search-using-regexp",
       "pick-random-item",
       "generate-random-integer",
+      "Isitdefined_question",
       "add",
       "subtract",
       "multiply",
