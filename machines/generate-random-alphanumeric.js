@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Build alphanumeric string',
+  friendlyName: 'Generate random alphanumeric',
 
 
-  description: 'Build a random alphanumeric string.  All alphabetical characters will be upper-case.',
+  description: 'Generate a random alphanumeric string.  All alphabetical characters will be upper-case.',
 
 
   extendedDescription: '',
