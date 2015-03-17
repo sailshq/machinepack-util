@@ -8,7 +8,7 @@
 Utilities for everyday tasks with arrays, dictionaries, strings, etc.
 
 
-## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-util.svg)](http://badge.fury.io/js/machinepack-util) [![Build Status](https://travis-ci.org/mikermcneil/machinepack-util.png?branch=master)](https://travis-ci.org/mikermcneil/machinepack-util)
+## Installation &nbsp; [![NPM version](https://badge.fury.io/js/machinepack-util.svg)](http://badge.fury.io/js/machinepack-util) [![Build Status](https://travis-ci.org/treelinehq/machinepack-util.png?branch=master)](https://travis-ci.org/treelinehq/machinepack-util)
 
 ```sh
 $ npm install machinepack-util
