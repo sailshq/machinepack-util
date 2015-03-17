@@ -50,8 +50,7 @@
       "log",
       "parse-json",
       "hash-dictionary",
-      "build-alphanumeric-string",
-      "is-it-defined"
+      "build-alphanumeric-string"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
