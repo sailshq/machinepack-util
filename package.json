@@ -53,6 +53,6 @@
       "build-alphanumeric-string",
       "is-it-defined"
     ],
-    "testsUrl": "https://travis-ci.org/mikermcneil/machinepack-util"
+    "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
 }
