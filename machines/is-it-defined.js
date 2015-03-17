@@ -7,9 +7,9 @@ module.exports = {
   inputs: {
 
     value: {
+      description: 'The value to check.',
       extendedDescription: 'A value of any type may be provided.  If it evaluates to \'undefined\', the \'fail\' exit will be triggered.  Otherwise the \'pass\' exit will be triggered.',
       friendlyName: 'value',
-      description: 'The value to check.',
       typeclass: '*'
     }
 
