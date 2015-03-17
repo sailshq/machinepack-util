@@ -1,0 +1,10 @@
+{
+  "machine": "is-it-defined",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}
