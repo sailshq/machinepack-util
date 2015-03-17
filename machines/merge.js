@@ -2,6 +2,7 @@ module.exports = {
   friendlyName: 'Merge',
   description: 'Merge two dictionaries together and return the result.',
   sync: true,
+  cacheable: true,
   extendedDescription: '',
   inputs: {
     primary: {

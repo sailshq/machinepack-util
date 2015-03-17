@@ -2,6 +2,7 @@ module.exports = {
   friendlyName: 'Divide (÷)',
   description: 'Divide two numbers and return the quotient.',
   sync: true,
+  cacheable: true,
   inputs: {
     a: {
       description: 'The first number.',

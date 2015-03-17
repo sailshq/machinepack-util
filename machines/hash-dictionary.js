@@ -2,6 +2,7 @@ module.exports = {
   friendlyName: 'Hash dictionary',
   description: 'Generate unique string from the provided dictionary.',
   sync: true,
+  cacheable: true,
   extendedDescription: 'Useful for checksums (error-checking) and hash keys (caching, etc.) Uses the crypto module from Node core via `object-hash` on NPM (see http://npmjs.org/package/object-hash)',
   inputs: {
     dictionary: {

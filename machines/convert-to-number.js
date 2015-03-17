@@ -3,6 +3,7 @@ module.exports = {
   description: 'Convert the specified string to its numeric equivalent.',
   extendedDescription: 'For example, "5" is converted to 5.',
   sync: true,
+  cacheable: true,
   inputs: {
     string: {
       description: 'The string to convert',

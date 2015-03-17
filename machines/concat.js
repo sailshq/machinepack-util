@@ -3,6 +3,7 @@ module.exports = {
   description: 'Concatenate an array of strings and return the combined version.',
   extendedDescription: '',
   sync: true,
+  cacheable: true,
   inputs: {
     strings: {
       description: 'The array of strings to concatenate',

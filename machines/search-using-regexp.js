@@ -2,6 +2,7 @@ module.exports = {
   friendlyName: 'Search string using regexp',
   description: 'Search a string using a regular expression and return the first match.',
   sync: true,
+  cacheable: true,
   inputs: {
     string: {
       example: 'hello world',

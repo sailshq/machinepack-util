@@ -3,6 +3,7 @@ module.exports = {
   description: 'Get the value at a particular key within a dictionary.',
   extendedDescription: '',
   sync: true,
+  cacheable: true,
   inputs: {
     dictionary: {
       description: 'The dictionary to dereference',

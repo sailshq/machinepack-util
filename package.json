@@ -33,8 +33,6 @@
       "convert-to-camel-case",
       "convert-to-string",
       "convert-to-number",
-      "create-dictionary",
-      "create-array",
       "generate-unique-token",
       "index-of",
       "merge",
@@ -50,7 +48,9 @@
       "log",
       "parse-json",
       "hash-dictionary",
-      "generate-random-alphanumeric"
+      "generate-random-alphanumeric",
+      "build-array",
+      "build-dictionary"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }

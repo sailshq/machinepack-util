@@ -3,6 +3,7 @@ module.exports = {
   description: 'Multiply two numbers and return the product.',
   extendedDescription: '',
   sync: true,
+  cacheable: true,
   inputs: {
     a: {
       description: 'The first number.',

@@ -1,11 +1,12 @@
 module.exports = {
-  friendlyName: 'Create array',
-  description: 'Create an array using the specified values.',
+  friendlyName: 'Build dictionary',
+  description: 'Build a dictionary using the specified keys and values.',
   sync: true,
+  cacheable: true,
   inputs: {
-    array: {
-      description: 'The array to build.',
-      typeclass: 'array',
+    dictionary: {
+      description: 'The object to build.',
+      typeclass: 'dictionary',
       required: true
     }
   },
@@ -17,16 +18,16 @@ module.exports = {
       description: 'Unexpected error occurred.'
     },
     success: {
-      description: 'Returns created array.',
       friendlyName: 'then',
+      description: 'Done.',
       getExample: function(inputs, exits) {
-        return inputs.array;
+        return inputs.dictionary;
       }
     }
   },
 
   fn: function(inputs, exits) {
-    return exits.success(inputs.array);
+    return exits.success(inputs.dictionary);
   }
 
 };

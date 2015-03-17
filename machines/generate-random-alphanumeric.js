@@ -10,6 +10,9 @@ module.exports = {
   extendedDescription: '',
 
 
+  sync: true,
+
+
   inputs: {
 
     numChars: {

@@ -3,6 +3,7 @@ module.exports = {
   description: 'Build a new camel-cased version of the specified dash-delimited string.',
   extendedDescription: 'Returns a version of the string with dashes removed, using medial capitalization to separate words instead. See http://en.wikipedia.org/wiki/CamelCase for more information.',
   sync: true,
+  cacheable: true,
   inputs: {
     string: {
       example: 'foo-bar-baz',

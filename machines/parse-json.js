@@ -3,6 +3,7 @@ module.exports = {
   description: 'Parse data from a JSON string.',
   extendedDescription: '',
   sync: true,
+  cacheable: true,
   inputs: {
     json: {
       description: 'The JSON string to parse',

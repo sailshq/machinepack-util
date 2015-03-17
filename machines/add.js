@@ -3,6 +3,7 @@ module.exports = {
   description: 'Add two numbers together and return the sum.',
   extendedDescription: '',
   sync: true,
+  cacheable: true,
   inputs: {
     a: {
       description: 'The first number.',

@@ -3,6 +3,7 @@ module.exports = {
   description: 'Look up the first occurence of the item and return its array index.',
   extendedDescription: '',
   sync: true,
+  cacheable: true,
   inputs: {
     array: {
       typeclass: 'array',

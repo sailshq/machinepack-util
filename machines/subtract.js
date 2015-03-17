@@ -3,6 +3,7 @@ module.exports = {
   description: 'Subtract one number from another and return the difference.',
   extendedDescription: '',
   sync: true,
+  cacheable: true,
   inputs: {
     a: {
       description: 'The number to subtract from.',
