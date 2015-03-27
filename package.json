@@ -1,6 +1,6 @@
 {
   "name": "machinepack-util",
-  "version": "4.0.1",
+  "version": "4.1.0",
   "description": "Utilities for everyday tasks with arrays, dictionaries, strings, etc.",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
@@ -50,7 +50,8 @@
       "hash-dictionary",
       "generate-random-alphanumeric",
       "build-array",
-      "build-dictionary"
+      "build-dictionary",
+      "is-it-defined"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
