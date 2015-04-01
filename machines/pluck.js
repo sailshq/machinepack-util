@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'Pluck',
 
 
-  description: 'Gets the value of key from all elements in collection.',
+  description: 'Gets the value of `key` from all elements in `collection`.',
 
 
   extendedDescription: '',
@@ -39,8 +39,8 @@ module.exports = {
     success: {
       description: 'Done.',
       getExample: function(inputs, env) {
-        if (Array.isArray(inputs.collection)) {
-            return [inputs.collection[0][inputs.property]];
+        if (Array.isArray(inputs.collection) && inputs.collection.length) {
+            return [inputs.collection[0][inputs.key]];
         }
         return undefined;
       }
