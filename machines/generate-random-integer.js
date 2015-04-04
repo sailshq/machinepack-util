@@ -32,7 +32,7 @@ module.exports = {
   fn: function (inputs, exits) {
     var start = Number(inputs.start);
     var end = Number(inputs.end);
-    var result = Math.ceil(Math.random() * end) + start;
+    var result = Math.floor(Math.random() * end) + start;
     exits.success(result);
   }
 
