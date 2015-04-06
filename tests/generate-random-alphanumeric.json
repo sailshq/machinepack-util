@@ -1,0 +1,10 @@
+{
+  "machine": "generate-random-alphanumeric",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}

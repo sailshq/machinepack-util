@@ -1,0 +1,10 @@
+{
+  "machine": "build-dictionary",
+  "expectations": [
+    {
+      "todo": true,
+      "using": {},
+      "outcome": "success"
+    }
+  ]
+}
