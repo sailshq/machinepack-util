@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'Sort',
 
 
-  description: 'Builds a new array which is `collection` sorted by its `key` property.',
+  description: 'Build a new array which is `collection` sorted by its `key` property.',
 
 
   extendedDescription: '',

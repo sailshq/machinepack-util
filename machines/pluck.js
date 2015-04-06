@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'Pluck',
 
 
-  description: 'Builds an array consisting of the values of the `key` property from each element in `collection`.',
+  description: 'Build an array consisting of the values of the `key` property from each element in `collection`.',
 
 
   extendedDescription: '',

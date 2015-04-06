@@ -53,7 +53,8 @@
       "build-dictionary",
       "is-it-defined",
       "pluck",
-      "sort"
+      "sort",
+      "reverse"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
