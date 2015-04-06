@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Pluck',
+  friendlyName: 'Sort',
 
 
-  description: 'Builds an array consisting of the values of the `key` property from each element in `collection`.',
+  description: 'Builds a new array which is `collection` sorted by its `key` property.',
 
 
   extendedDescription: '',
@@ -13,14 +13,16 @@ module.exports = {
   inputs: {
 
     collection: {
-      description: 'The array to iterate over.',
+      friendlyName: 'Array',
+      description: 'The array to sort.',
       typeclass: 'array',
       required: true
     },
 
     key: {
-      description: 'The key of the property to pluck.',
-      example: 'id',
+      friendlyName: 'Sort by...',
+      description: 'The property to sort by.',
+      example: 'createdAt',
       required: true
     }
 
@@ -40,9 +42,8 @@ module.exports = {
       description: 'Done.',
       getExample: function(inputs, env) {
         if (Array.isArray(inputs.collection) && inputs.collection.length) {
-          return [inputs.collection[0][inputs.key]];
+          return [inputs.collection[0]];
         }
-        return;
       }
     }
 
@@ -51,7 +52,7 @@ module.exports = {
 
   fn: function (inputs,exits) {
     var _ = require('lodash');
-    return exits.success(_.pluck(inputs.collection, inputs.key));
+    return exits.success(_.sortBy(inputs.collection, inputs.key));
   }
 
 

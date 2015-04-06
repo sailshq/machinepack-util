@@ -52,7 +52,8 @@
       "build-array",
       "build-dictionary",
       "is-it-defined",
-      "pluck"
+      "pluck",
+      "sort"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
