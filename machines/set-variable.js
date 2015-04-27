@@ -5,7 +5,7 @@ module.exports = {
   inputs: {
     value: {
       description: 'The value you wish to save as a variable.',
-      typeclass = '*',
+      typeclass: '*',
       required: true
     },
   },
@@ -23,7 +23,7 @@ module.exports = {
     }
   },
   fn: function (inputs, exits) {
-    var result = inputs.value
+    var result = inputs.value;
     exits.success(result);
   }
 
