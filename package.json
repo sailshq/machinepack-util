@@ -54,7 +54,8 @@
       "is-it-defined",
       "pluck",
       "sort",
-      "reverse"
+      "reverse",
+      "set-variable"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
