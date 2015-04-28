@@ -49,8 +49,7 @@
       "generate-random-alphanumeric",
       "build-dictionary",
       "is-it-defined",
-      "pluck",
-      "sort"
+      "pluck"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
