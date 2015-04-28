@@ -13,7 +13,7 @@ module.exports = {
   inputs: {
 
     collection: {
-      description: 'The array to iterate over.',
+      description: 'The array of dictionaries to iterate over.',
       typeclass: 'array',
       required: true
     },
@@ -51,6 +51,7 @@ module.exports = {
 
   fn: function (inputs,exits) {
     var _ = require('lodash');
+
     return exits.success(_.pluck(inputs.collection, inputs.key));
   }
 
