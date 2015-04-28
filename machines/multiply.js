@@ -23,6 +23,7 @@ module.exports = {
     },
     success: {
       description: 'Returns the product (a ✕ b)',
+      variableName: 'product',
       example: -20
     }
   },

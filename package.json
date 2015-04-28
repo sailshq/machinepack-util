@@ -34,7 +34,6 @@
       "convert-to-string",
       "convert-to-number",
       "generate-unique-token",
-      "index-of",
       "merge",
       "search-using-regexp",
       "pick-random-item",
@@ -49,12 +48,10 @@
       "parse-json",
       "hash-dictionary",
       "generate-random-alphanumeric",
-      "build-array",
       "build-dictionary",
       "is-it-defined",
       "pluck",
-      "sort",
-      "reverse"
+      "sort"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
