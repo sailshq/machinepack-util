@@ -36,7 +36,6 @@
       "generate-unique-token",
       "merge",
       "search-using-regexp",
-      "pick-random-item",
       "generate-random-integer",
       "add",
       "subtract",
