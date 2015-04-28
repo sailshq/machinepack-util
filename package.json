@@ -45,11 +45,11 @@
       "dereference",
       "log",
       "parse-json",
-      "hash-dictionary",
       "generate-random-alphanumeric",
       "build-dictionary",
       "is-it-defined",
-      "pluck"
+      "pluck",
+      "hash"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
