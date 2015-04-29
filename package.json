@@ -42,7 +42,6 @@
       "divide",
       "concat",
       "log",
-      "parse-json",
       "generate-random-alphanumeric",
       "hash"
     ],
