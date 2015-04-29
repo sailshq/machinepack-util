@@ -24,7 +24,7 @@ module.exports = {
     success: {
       description: 'Done.',
       getExample: function(inputs, env) {
-        return env._.merge(_.merge({}, inputs.secondary), inputs.primary);
+        return env._.merge(env._.merge({}, inputs.secondary), inputs.primary);
       }
     }
   },

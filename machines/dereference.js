@@ -1,6 +1,6 @@
 module.exports = {
-  friendlyName: 'Dereference (.)',
-  description: 'Get the value at a particular key within a dictionary.',
+  friendlyName: 'Dot (.)',
+  description: 'Get the value of (dereference) a particular key within a dictionary.',
   extendedDescription: '',
   sync: true,
   cacheable: true,

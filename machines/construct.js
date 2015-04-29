@@ -1,11 +1,11 @@
 module.exports = {
-  friendlyName: 'Build dictionary',
-  description: 'Build a dictionary using the specified keys and values.',
+  friendlyName: 'Construct dictionary',
+  description: 'Construct a dictionary using the specified keys and values.',
   sync: true,
   cacheable: true,
   inputs: {
     dictionary: {
-      description: 'The object to build.',
+      description: 'The dictionary to construct.',
       typeclass: 'dictionary',
       required: true
     }

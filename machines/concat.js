@@ -1,12 +1,12 @@
 module.exports = {
-  friendlyName: 'Concatenate',
-  description: 'Concatenate an array of strings and return the combined version.',
+  friendlyName: 'Combine strings',
+  description: 'Concatenate an array of strings into one new string.',
   extendedDescription: '',
   sync: true,
   cacheable: true,
   inputs: {
     strings: {
-      description: 'The array of strings to concatenate',
+      description: 'The array of strings to join',
       example: ['foo'],
       required: true
     }

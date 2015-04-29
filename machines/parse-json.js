@@ -7,11 +7,11 @@ module.exports = {
   inputs: {
     json: {
       description: 'The JSON string to parse',
-      example: '{"some json": "like this"}',
+      example: '...{"some json": "like this"}...',
       required: true
     },
     schema: {
-      description: 'An example of what the resulting data should look like.',
+      description: 'A representative example of what the resulting data should look like.',
       typeclass: '*',
       required: true
     }

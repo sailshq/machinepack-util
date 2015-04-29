@@ -46,10 +46,10 @@
       "log",
       "parse-json",
       "generate-random-alphanumeric",
-      "build-dictionary",
       "is-it-defined",
       "pluck",
-      "hash"
+      "hash",
+      "construct"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
