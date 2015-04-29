@@ -1,17 +1,19 @@
 module.exports = {
   friendlyName: 'Divide (÷)',
-  description: 'Divide two numbers and return the quotient.',
+  description: 'Divide one number by another and return the quotient.',
   sync: true,
   cacheable: true,
   inputs: {
     a: {
-      description: 'The first number.',
+      friendlyName: "Numerator",
+      description: 'The number to divide (aka "dividend")',
       example: 5,
       required: true
     },
     b: {
-      description: 'The second number.',
-      example: 2,
+      friendlyName: "Denominator",
+      description: 'The number to divide by (aka "divisor")',
+      example: -2,
       required: true
     }
   },
@@ -20,12 +22,21 @@ module.exports = {
     error: {
       description: 'Unexpected error occurred.'
     },
+    invalidDenominator: {
+      friendlyName: 'invalid denominator',
+      description: 'The denominator was provided as 0, but computers haven\'t learned how to divide by zero (yet).'
+    },
     success: {
-      description: 'Returns the quotient (a ÷ b)',
-      example: 2.5
+      friendlyName: 'then',
+      description: 'Returns the quotient (numerator ÷ denominator)',
+      variableName: 'quotient',
+      example: -2.5
     }
   },
   fn: function(inputs, exits) {
+    if (inputs.b === 0) {
+      return exits.invalidDenominator();
+    }
     return exits.success(inputs.a/inputs.b);
   },
 
