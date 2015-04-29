@@ -44,7 +44,6 @@
       "log",
       "parse-json",
       "generate-random-alphanumeric",
-      "is-it-defined",
       "hash"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
