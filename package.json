@@ -34,7 +34,6 @@
       "convert-to-string",
       "convert-to-number",
       "generate-unique-token",
-      "merge",
       "search-using-regexp",
       "generate-random-integer",
       "add",
@@ -42,14 +41,11 @@
       "multiply",
       "divide",
       "concat",
-      "dereference",
       "log",
       "parse-json",
       "generate-random-alphanumeric",
       "is-it-defined",
-      "pluck",
-      "hash",
-      "construct"
+      "hash"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
