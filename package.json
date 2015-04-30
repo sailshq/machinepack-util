@@ -30,19 +30,13 @@
     "friendlyName": "Util",
     "machineDir": "machines/",
     "machines": [
-      "convert-to-camel-case",
-      "convert-to-string",
       "convert-to-number",
-      "generate-unique-token",
-      "search-using-regexp",
       "generate-random-integer",
       "add",
       "subtract",
       "multiply",
       "divide",
-      "concat",
       "log",
-      "generate-random-alphanumeric",
       "hash"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
