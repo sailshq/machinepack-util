@@ -30,8 +30,6 @@
     "friendlyName": "Util",
     "machineDir": "machines/",
     "machines": [
-      "convert-to-number",
-      "generate-random-integer",
       "log",
       "hash"
     ],
