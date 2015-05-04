@@ -32,10 +32,6 @@
     "machines": [
       "convert-to-number",
       "generate-random-integer",
-      "add",
-      "subtract",
-      "multiply",
-      "divide",
       "log",
       "hash"
     ],
