@@ -32,7 +32,8 @@
     "machines": [
       "log",
       "hash",
-      "inspect"
+      "inspect",
+      "coalesce"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
