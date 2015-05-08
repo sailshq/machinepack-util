@@ -31,7 +31,8 @@
     "machineDir": "machines/",
     "machines": [
       "log",
-      "hash"
+      "hash",
+      "inspect"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }

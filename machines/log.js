@@ -1,26 +1,40 @@
 module.exports = {
+
+
   friendlyName: 'Log a message',
+
+
   description: 'Output a message to the console',
+
+
   sync: true,
+
+
   extendedDescription: '',
+
+
   inputs: {
-    message: {
-      example: 'hello world',
+
+    value: {
+      typeclass: '*',
       required: true,
-      description: 'The message to output to the console.'
+      description: 'The value that will be inspected and written to the console.'
     }
+
   },
-  defaultExit: 'success',
+
+
   exits: {
-    error: {
-      description: 'Unexpected error occurred.'
-    },
+
     success: {
       description: 'Done.'
     }
+
   },
+
+
   fn: function(inputs, exits) {
-    console.log(inputs.message);
+    console.log(inputs.value);
     return exits.success();
   }
 
