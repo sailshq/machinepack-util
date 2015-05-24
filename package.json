@@ -13,9 +13,9 @@
   "author": "Mike McNeil",
   "license": "MIT",
   "dependencies": {
-    "machine": "^4.0.0",
-    "lodash": "^2.4.1",
     "hat": "0.0.3",
+    "lodash": "^3.9.2",
+    "machine": "^9.0.1",
     "object-hash": "^0.5.0"
   },
   "repository": {
@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "mocha": "^2.1.0",
-    "test-machinepack-mocha": "^0.2.2"
+    "test-machinepack-mocha": "^1.0.0"
   },
   "machinepack": {
     "friendlyName": "Util",
