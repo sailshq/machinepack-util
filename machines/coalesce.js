@@ -19,21 +19,18 @@ module.exports = {
   sync: true,
 
 
-  idempotent: true,
-
-
   inputs: {
 
     a: {
       friendlyName: 'Preferred value',
       description: 'The preferred value to use, if it\'s defined. Must be the same type as the alternate.',
-      typeclass: '*'
+      example: '==='
     },
 
     b: {
       friendlyName: 'Alternate value',
       description: 'The backup/alternate value to use in case the preferred value is not defined.',
-      typeclass: '*',
+      example: '===',
       required: true
     }
 

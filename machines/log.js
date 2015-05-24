@@ -16,9 +16,9 @@ module.exports = {
   inputs: {
 
     value: {
-      typeclass: '*',
-      required: true,
-      description: 'The value that will be inspected and written to the console.'
+      friendlyName: 'Value',
+      description: 'The value that will be written to the console.',
+      example: '==='
     }
 
   },

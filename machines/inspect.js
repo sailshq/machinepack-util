@@ -16,9 +16,10 @@ module.exports = {
   inputs: {
 
     value: {
-      typeclass: '*',
-      required: true,
-      description: 'The value that will be formatted into a more-readable string.'
+      friendlyName: 'Value',
+      typeclass: '===',
+      description: 'The value that will be formatted into a more-readable string.',
+      required: true
     }
 
   },
@@ -36,7 +37,16 @@ module.exports = {
 
 
   fn: function(inputs, exits) {
-    return exits.success(require('util').inspect(inputs.value, false, null));
+    var util = require('util');
+    var _ = require('lodash');
+
+    if (_.isError(inputs.value)) {
+      return exits.success(util.inspect(inputs.value.stack));
+    }
+    if (_.isObject(inputs.value)) {
+      return exits.success(util.inspect(inputs.value, false, null));
+    }
+    return exits.success(util.inspect(inputs.value));
   }
 
 };

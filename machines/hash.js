@@ -19,8 +19,9 @@ module.exports = {
   inputs: {
 
     value: {
-      typeclass: '*',
-      description: 'The value from which the unique string hash will be calculated.',
+      friendlyName: 'Value',
+      example: '*',
+      description: 'The value for which to calculate a unique hash string.',
       required: true
     }
 
