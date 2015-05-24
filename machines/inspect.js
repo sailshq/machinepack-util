@@ -17,9 +17,8 @@ module.exports = {
 
     value: {
       friendlyName: 'Value',
-      typeclass: '===',
-      description: 'The value that will be formatted into a more-readable string.',
-      required: true
+      example: '===',
+      description: 'The value that will be formatted into a more-readable string.'
     }
 
   },
