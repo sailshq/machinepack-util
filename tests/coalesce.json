@@ -3,45 +3,45 @@
   "expectations": [
     {
       "using": {
-        "a": "William Shatner",
-        "b": "Will Shatner"
+        "a": "\"William Shatner\"",
+        "b": "\"Will Shatner\""
       },
       "outcome": "success",
       "returns": "William Shatner"
     },
     {
       "using": {
-        "b": "Will Shatner"
+        "b": "\"Will Shatner\""
       },
       "outcome": "success",
       "returns": "Will Shatner"
     },
     {
       "using": {
-        "a": "Will Shatner",
-        "b": "Bill Shatner"
+        "a": "\"Will Shatner\"",
+        "b": "\"Bill Shatner\""
       },
       "outcome": "success",
       "returns": "Will Shatner"
     },
     {
       "using": {
-        "b": "Bill Shatner"
+        "b": "\"Bill Shatner\""
       },
       "outcome": "success",
       "returns": "Bill Shatner"
     },
     {
       "using": {
-        "a": "Bill Shatner",
-        "b": "Bill"
+        "a": "\"Bill Shatner\"",
+        "b": "\"Bill\""
       },
       "outcome": "success",
       "returns": "Bill Shatner"
     },
     {
       "using": {
-        "b": "Bill"
+        "b": "\"Bill\""
       },
       "outcome": "success",
       "returns": "Bill"

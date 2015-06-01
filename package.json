@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "mocha": "^2.1.0",
-    "test-machinepack-mocha": "^1.0.0"
+    "test-machinepack-mocha": "^2.0.0"
   },
   "machinepack": {
     "friendlyName": "Util",
