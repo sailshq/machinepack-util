@@ -12,7 +12,13 @@
   ],
   "author": "Mike McNeil",
   "license": "MIT",
+  "browserify": {
+    "transform": [
+      "browserify-transform-machinepack"
+    ]
+  },
   "dependencies": {
+    "browserify-transform-machinepack": "^1.0.3",
     "hat": "0.0.3",
     "lodash": "^3.9.2",
     "machine": "^10.3.1",
