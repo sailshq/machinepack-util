@@ -10,9 +10,6 @@ module.exports = {
   sync: true,
 
 
-  extendedDescription: '',
-
-
   inputs: {
 
     value: {

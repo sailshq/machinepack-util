@@ -1,7 +1,7 @@
 {
   "name": "machinepack-util",
   "version": "5.1.1",
-  "description": "Utilities for everyday tasks with arrays, dictionaries, strings, etc.",
+  "description": "Miscellaneous utilities for everyday tasks with arrays, dictionaries, strings, etc.",
   "scripts": {
     "test": "node ./node_modules/test-machinepack-mocha/bin/testmachinepack-mocha.js"
   },
@@ -18,19 +18,18 @@
     ]
   },
   "dependencies": {
-    "browserify-transform-machinepack": "^1.0.3",
-    "hat": "0.0.3",
-    "lodash": "^3.9.2",
-    "machine": "^10.3.1",
-    "object-hash": "^0.5.0"
+    "browserify-transform-machinepack": "~1.0.3",
+    "lodash": "3.10.1",
+    "machine": "~12.1.0",
+    "object-hash": "0.5.0"
   },
   "repository": {
     "type": "git",
     "url": "git@github.com:treelinehq/machinepack-util.git"
   },
   "devDependencies": {
-    "mocha": "^2.1.0",
-    "test-machinepack-mocha": "^2.1.1"
+    "mocha": "2.1.0",
+    "test-machinepack-mocha": "~2.1.1"
   },
   "machinepack": {
     "friendlyName": "Util",

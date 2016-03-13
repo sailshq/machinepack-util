@@ -40,11 +40,8 @@ module.exports = {
   exits: {
 
     success: {
-      variableName: 'result',
-      description: 'Done.',
-      getExample: function (inputs){
-        return inputs.b;
-      }
+      outputDescription: 'Either the preferred value or the secondary value.',
+      like: 'b'
     },
 
   },

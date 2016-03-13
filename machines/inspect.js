@@ -1,10 +1,10 @@
 module.exports = {
 
 
-  friendlyName: 'Pretty-print',
+  friendlyName: 'Inspect',
 
 
-  description: 'Format any value into a more-readable string.',
+  description: 'Pretty-print any value into a more-readable string.',
 
 
   sync: true,
@@ -27,8 +27,7 @@ module.exports = {
   exits: {
 
     success: {
-      description: 'Done.',
-      variableName: 'prettified',
+      outputFriendlyName: 'prettified',
       example: '...[{\'foo\': [\'bar\']}]...'
     }
 
@@ -37,13 +36,12 @@ module.exports = {
 
   fn: function(inputs, exits) {
     var util = require('util');
-    var _ = require('lodash');
 
-    if (_.isError(inputs.value)) {
+    if (util.isError(inputs.value)) {
       return exits.success(util.inspect(inputs.value.stack));
     }
-    if (_.isObject(inputs.value)) {
-      return exits.success(util.inspect(inputs.value, false, null));
+    if (util.isObject(inputs.value)) {
+      return exits.success(util.inspect(inputs.value, {depth: null}));
     }
     return exits.success(util.inspect(inputs.value));
   }
