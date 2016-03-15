@@ -36,11 +36,13 @@ module.exports = {
 
   fn: function(inputs, exits) {
     var util = require('util');
+    var isError = require('lodash.iserror');
+    var isObject = require('lodash.isobject');
 
-    if (util.isError(inputs.value)) {
+    if (isError(inputs.value)) {
       return exits.success(util.inspect(inputs.value.stack));
     }
-    if (util.isObject(inputs.value)) {
+    if (isObject(inputs.value)) {
       return exits.success(util.inspect(inputs.value, {depth: null}));
     }
     return exits.success(util.inspect(inputs.value));

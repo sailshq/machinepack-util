@@ -20,6 +20,8 @@
   "dependencies": {
     "browserify-transform-machinepack": "~1.0.3",
     "lodash": "3.10.1",
+    "lodash.iserror": "3.1.1",
+    "lodash.isobject": "3.0.2",
     "machine": "~12.1.0",
     "object-hash": "0.5.0"
   },
