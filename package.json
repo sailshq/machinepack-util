@@ -40,7 +40,8 @@
       "log",
       "hash",
       "inspect",
-      "coalesce"
+      "coalesce",
+      "require"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
