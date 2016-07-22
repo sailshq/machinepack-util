@@ -21,10 +21,11 @@ module.exports = {
 
   inputs: {
 
-    path: {
-      example: '/code/machinepack-twitter',
-      description: 'The absolute path to a Node.js module, or to the directory of an NPM package.',
+    pathOrPkgName: {
+      friendlyName: 'Path or package name',
+      description: 'The name of a locally-installed NPM package-- or the absolute path to a Node.js module, or to the directory of an NPM package.',
       extendedDescription: 'If a relative path is provided, it will be resolved to an absolute path from the context of the current working directory.',
+      example: '/code/machinepack-twitter',
       required: true
     }
 
@@ -60,7 +61,7 @@ module.exports = {
   fn: function (inputs, exits) {
     var path = require('path');
 
-    var absPath = path.resolve(process.cwd(), inputs.path);
+    var absPath = path.resolve(process.cwd(), inputs.pathOrPkgName);
     try {
       var result = require(absPath);
       return exits.success(result);
