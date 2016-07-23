@@ -13,10 +13,10 @@ module.exports = {
   moreInfoUrl: 'http://en.wikipedia.org/wiki/Null_coalescing_operator',
 
 
-  cacheable: true,
-
-
   sync: true,
+
+
+  sideEffects: 'cacheable',
 
 
   inputs: {

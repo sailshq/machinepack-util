@@ -13,13 +13,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     value: {
-      friendlyName: 'Value',
       example: '*',
       description: 'The value for which to calculate a unique hash string.',
       required: true
@@ -31,8 +30,8 @@ module.exports = {
   exits: {
 
     success: {
-      description: 'Done.',
-      example: 'e003c89cdf35cdf46d8239b4692436364b7259f9'
+      outputDescription: 'The unique hash derived from a value.',
+      outputExample: 'e003c89cdf35cdf46d8239b4692436364b7259f9'
     }
 
   },
