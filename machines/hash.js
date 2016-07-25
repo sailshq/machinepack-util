@@ -30,6 +30,7 @@ module.exports = {
   exits: {
 
     success: {
+      outputFriendlyName: 'Hashed value',
       outputDescription: 'The unique hash derived from a value.',
       outputExample: 'e003c89cdf35cdf46d8239b4692436364b7259f9'
     }

@@ -10,13 +10,12 @@ module.exports = {
   sync: true,
 
 
-  cacheable: true,
+  sideEffects: 'cacheable',
 
 
   inputs: {
 
     value: {
-      friendlyName: 'Value',
       example: '===',
       description: 'The value that will be formatted into a more-readable string.'
     }
@@ -27,8 +26,9 @@ module.exports = {
   exits: {
 
     success: {
-      outputFriendlyName: 'prettified',
-      example: '...[{\'foo\': [\'bar\']}]...'
+      outputFriendlyName: 'Inspected value',
+      outputDescription: 'A prettified version of the input value.',
+      outputExample: '...[{\'foo\': [\'bar\']}]...'
     }
 
   },

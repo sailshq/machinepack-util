@@ -40,6 +40,7 @@ module.exports = {
   exits: {
 
     success: {
+      outputFriendlyName: 'Coalesced value',
       outputDescription: 'Either the preferred value or the secondary value.',
       like: 'b'
     },
