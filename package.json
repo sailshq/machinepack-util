@@ -40,7 +40,8 @@
       "hash",
       "inspect",
       "guarantee",
-      "require"
+      "require",
+      "construct"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }

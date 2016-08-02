@@ -1,0 +1,41 @@
+{
+  "machine": "construct",
+  "expectations": [
+    {
+      "using": {
+        "value": 123
+      },
+      "outcome": "success",
+      "returns": 123
+    },
+    {
+      "using": {
+        "value": "\"123\""
+      },
+      "outcome": "success",
+      "returns": "\"123\""
+    },
+    {
+      "using": {
+        "value": [123]
+      },
+      "outcome": "success",
+      "returns": [123]
+    },
+    {
+      "using": {
+        "value": {"123":[123]}
+      },
+      "outcome": "success",
+      "returns": {"123":[123]}
+    },
+    {
+      "using": {
+        "value": {"yes":true, "no": false}
+      },
+      "outcome": "success",
+      "returns": {"yes":true, "no": false}
+    }
+
+  ]
+}
