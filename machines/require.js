@@ -26,6 +26,13 @@ module.exports = {
       extendedDescription: 'If a relative path is provided, it will be resolved to an absolute path from the context of the current working directory.',
       example: '/code/machinepack-twitter',
       required: true
+    },
+
+    clearCache: {
+      friendlyName: 'Clear cache?',
+      description: 'Whether to clear the requested module from the require cache before attempting to load.',
+      example: true,
+      defaultsTo: false
     }
 
   },
@@ -58,15 +65,36 @@ module.exports = {
   },
 
   fn: function (inputs, exits) {
+
+    // Import `path`.
     var path = require('path');
 
-    var absPath = path.resolve(process.cwd(), inputs.path);
+    // Attempt to resolve the input path into something `require` can find.
+    var absPath;
+    try {
+      absPath = require.resolve(path.resolve(process.cwd(), inputs.path));
+    }
+    // If the path couldn't be resolved, leave through `moduleNotFound`.
+    catch(e) {
+      return exits.moduleNotFound(e);
+    }
+
+    // If `inputs.clearCache` is set, clear this path from the require
+    // cache before attempting to load.
+    if (inputs.clearCache) {
+      delete require.cache[absPath];
+    }
+
+    // Attempt to require the module.
     try {
       var result = require(absPath);
+      // If successful, output the module through the `success` exit.
       return exits.success(result);
     }
     catch (e) {
+      // If the module could not be found, leave through `moduleNotFound`.
       if (e.code === 'MODULE_NOT_FOUND') { return exits.moduleNotFound(e); }
+      // Otherwise leave through `couldNotLoad`.
       else { return exits.couldNotLoad(e); }
     }
   }
