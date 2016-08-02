@@ -37,7 +37,6 @@
     "friendlyName": "Util",
     "machineDir": "machines/",
     "machines": [
-      "log",
       "hash",
       "inspect",
       "coalesce",
