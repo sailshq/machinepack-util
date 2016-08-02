@@ -1,0 +1,32 @@
+{
+  "machine": "guarantee",
+  "expectations": [
+    {
+      "using": {
+        "value": "\"William Shatner\"",
+        "defaultValue": "\"Will Shatner\""
+      },
+      "outcome": "success",
+      "returns": "William Shatner"
+    },
+    {
+      "using": {
+        "defaultValue": "\"Will Shatner\""
+      },
+      "outcome": "success",
+      "returns": "Will Shatner"
+    },
+    {
+      "using": {
+        "defaultValue": "\"Bill\""
+      },
+      "outcome": "success",
+      "returns": "Bill"
+    },
+    {
+      "using": {},
+      "outcome": "notDefined"
+    }
+
+  ]
+}
