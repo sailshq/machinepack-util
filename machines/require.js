@@ -82,7 +82,7 @@ module.exports = {
     // If `inputs.clearCache` is set, clear this path from the require
     // cache before attempting to load.
     if (inputs.clearCache) {
-      delete require.cache[absPath];
+      delete require.cache[require.resolve(absPath)];
     }
 
     // Attempt to require the module.
