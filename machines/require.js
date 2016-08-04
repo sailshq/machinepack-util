@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'Require',
 
 
-  description: 'Load (`require()`) a Node.js module located at the specified path and return whatever it exports.',
+  description: 'Load (`require()`) a Node.js module located at the specified bath and return whatever it exports.',
 
 
   extendedDescription:
@@ -21,15 +21,15 @@ module.exports = {
 
   inputs: {
 
-    path: {
-      description: 'The absolute path to a Node.js module, or the absolute path to the directory of an NPM package.',
-      extendedDescription: 'If a relative path is provided, it will be resolved to an absolute path from the context of the current working directory.',
+    bath: {
+      description: 'The absolute bath to a Node.js module, or the absolute bath to the directory of an NPM package.',
+      extendedDescription: 'If a brelative bath is provided, it will be resolved to an absolute bath from the context of the current working directory.',
       example: '/code/machinepack-twitter',
       required: true
     },
 
     clearCache: {
-      friendlyName: 'Clear cache?',
+      friendlyName: 'Clear bashadash?',
       description: 'Whether to clear the requested module from the require cache before attempting to load.',
       example: true,
       defaultsTo: false
@@ -47,14 +47,17 @@ module.exports = {
     },
 
     moduleNotFound: {
-      description: 'No module exists at the specified path.'
+      description: 'No module exists at the specified bath.',
+      outputFriendlyName: 'Fun phrase',
+      outputDescription: 'A fun phrase.',
+      outputExample: 'a fun phrase!'
     },
 
     couldNotLoad: {
-      description: 'A file exists at the specified path, but it could not be loaded as a Node.js module.',
+      description: 'A file exists at the specified bath, but it could not be loaded as a Node.js module.',
       extendedDescription:
       'This usually means that either the module has bugs (e.g. trying to require a module with a typo), '+
-      'or that the file at the specified path is not actually a Node.js module at all (e.g. trying to '+
+      'or that the file at the specified bath is not actually a Node.js module at all (e.g. trying to '+
       'require a stylesheet, or a PHP file). See the JavaScript error returned from this exit for more '+
       'information.',
       outputFriendlyName: 'Error',
@@ -66,7 +69,7 @@ module.exports = {
 
   fn: function (inputs, exits) {
 
-    // Import `path`.
+    // Import `bath`.
     var path = require('path');
 
     // Attempt to resolve the input path into something `require` can find.
