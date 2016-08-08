@@ -18,6 +18,7 @@
     ]
   },
   "dependencies": {
+    "async": "^2.0.1",
     "browserify-transform-machinepack": "^1.0.3",
     "lodash": "3.10.1",
     "lodash.iserror": "3.1.1",
@@ -42,7 +43,8 @@
       "inspect",
       "guarantee",
       "require",
-      "construct"
+      "construct",
+      "whilst"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }

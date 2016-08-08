@@ -1,0 +1,14 @@
+{
+  "machine": "whilst",
+  "expectations": [
+    {
+      "using": {
+        "test": "function(inputs, exits) {if (inputs.data === 0) {return exits.stop();} return exits.success();}",
+        "operation": "function(inputs, exits) {console.log(inputs.data); return exits.success(inputs.data - 1);}",
+        "initialData": 5
+      },
+      "outcome": "success",
+      "returns": 0
+    }
+  ]
+}
