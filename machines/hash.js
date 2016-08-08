@@ -40,8 +40,13 @@ module.exports = {
 
   fn: function(inputs, exits) {
 
+    // Import `object-hash` as `hashFn`.
     var hashFn = require('object-hash');
+
+    // Hash the input value.
     var hash = hashFn(inputs.value);
+
+    // Return the result through the `success` exit.
     return exits.success(hash);
 
   },

@@ -14,12 +14,14 @@ module.exports = {
 
 
   inputs: {
+
     value: {
       description: 'The value to construct.',
       example: '*',
       constant: true,
       required: true
     }
+
   },
 
 
