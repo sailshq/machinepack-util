@@ -1,5 +1,6 @@
 var assert = require('assert');
 var Util = require('../');
+var path = require('path');
 
 describe('machinepack-util :: require', function() {
 
@@ -87,5 +88,47 @@ describe('machinepack-util :: require', function() {
     }
 
   });
+
+  describe('resolving from working directory', function() {
+    var cwd;
+    before(function() {
+      cwd = process.cwd();
+      process.chdir(path.resolve(__dirname, 'fixtures', 'module'));
+    });
+    after(function() {
+      process.chdir(cwd);
+    });
+
+    it('should be able to resolve modules with no path info from the current working directory', function() {
+
+      var module, module2, module3;
+      try {
+        module = Util.require({path: 'colors'}).execSync();
+        assert(module);
+        assert(module.styles);
+        module.foo = 'baz!';
+        try {
+          module2 = Util.require({path: 'colors'}).execSync();
+          assert.equal(module2.foo, 'baz!', 'Should have retrieved cached module, but could not find the var we set!');
+        }
+        catch (e) {
+          assert(false, e);
+        }
+        try {
+          module3 = Util.require({path: 'colors', clearCache: true}).execSync();
+          console.log(module2 === module3);
+          assert.equal(typeof module3.foo, 'undefined', 'Should have cleared cached, but the retrieved module still had the var we set!');
+        }
+        catch (e) {
+          assert(false, e);
+        }
+      }
+      catch (e) {
+        assert(false, e);
+      }
+    });
+  });
+
+
 
 });

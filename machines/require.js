@@ -11,7 +11,7 @@ module.exports = {
   'By default, the **require cache will not be cleared**.  To learn more about what that means, '+
   'check out [the section on the require cache in the official Node.js docs](https://nodejs.org/api/modules.html#modules_caching).\n'+
   '\n'+
-  'Also note that this method uses the default behavior of `requiree()` in Node.js, so beware of circular/cyclical '+
+  'Also note that this method uses the default behavior of `require()` in Node.js, so beware of circular/cyclical '+
   'dependencies!  See [Modules/Cycles in the Node.js docs](https://nodejs.org/api/modules.html#modules_cycles) '+
   'for more information.',
 
@@ -47,11 +47,11 @@ module.exports = {
     },
 
     moduleNotFound: {
-      description: 'No module exists at the specified path.'
+      description: 'No module could be found at the specified path.'
     },
 
     couldNotLoad: {
-      description: 'A file exists at the specified path, but it could not be loaded as a Node.js module.',
+      description: 'A file was found at the specified path, but it could not be loaded as a Node.js module.',
       extendedDescription:
       'This usually means that either the module has bugs (e.g. trying to require a module with a typo), '+
       'or that the file at the specified path is not actually a Node.js module at all (e.g. trying to '+
@@ -69,20 +69,41 @@ module.exports = {
     // Import `path`.
     var path = require('path');
 
-    // Attempt to resolve the input path into something `require` can find.
+    // Import `lodash` and `resolve`
+    var _ = require('lodash');
+    var resolve = require('resolve');
+
+    // Look for the requested module using `resolve`, so that we can get the correct location
+    // relative to the current working directory (as opposed to being relative to the location
+    // of machinepack-utils).
     var absPath;
+
     try {
-      absPath = require.resolve(path.resolve(process.cwd(), inputs.path));
-    }
-    // If the path couldn't be resolved, leave through `moduleNotFound`.
-    catch(e) {
-      return exits.moduleNotFound(e);
+      absPath = resolve.sync(inputs.path, {basedir: process.cwd()});
     }
 
-    // If `inputs.clearCache` is set, clear this path from the require
+    // If the path couldn't be resolved, leave through `moduleNotFound`.
+    catch(eCouldNotResolvePath) {
+      return exits.moduleNotFound(eCouldNotResolvePath);
+    }
+
+    // If `inputs.clearCache` is set, clear this path AND ALL CHILDREN from the require
     // cache before attempting to load.
     if (inputs.clearCache) {
-      delete require.cache[absPath];
+      // First, see if the item is actually cached.
+      if (require.cache[absPath]) {
+        // If so, add it to a stack of modules to remove.
+        var modulesToRemove = [require.cache[absPath]];
+        // While there are items in the stack...
+        while (modulesToRemove.length) {
+          // Pop a module off the stack.
+          var moduleToRemove = modulesToRemove.pop();
+          // Add its children to the stack.
+          modulesToRemove = modulesToRemove.concat(require.cache[moduleToRemove.id].children);
+          // Delete the module from the cache.
+          delete require.cache[moduleToRemove.id];
+        }
+      }
     }
 
     // Attempt to require the module.
@@ -97,6 +118,7 @@ module.exports = {
       // Otherwise leave through `couldNotLoad`.
       else { return exits.couldNotLoad(e); }
     }
+
   }
 
 
