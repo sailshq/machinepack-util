@@ -7,9 +7,6 @@ module.exports = {
   description: 'Perform an operation over and over until a specified test fails.',
 
 
-  sync: false,
-
-
   inputs: {
 
     test: {
