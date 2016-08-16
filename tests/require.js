@@ -116,7 +116,6 @@ describe('machinepack-util :: require', function() {
         }
         try {
           module3 = Util.require({path: 'colors', clearCache: true}).execSync();
-          console.log(module2 === module3);
           assert.equal(typeof module3.foo, 'undefined', 'Should have cleared cached, but the retrieved module still had the var we set!');
         }
         catch (e) {
