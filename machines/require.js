@@ -102,7 +102,8 @@ module.exports = {
           // Pop a module off the stack.
           var moduleToRemove = modulesToRemove.pop();
           // Add its children to the stack.
-          modulesToRemove = modulesToRemove.concat(require.cache[moduleToRemove.id].children);
+          var children = (require.cache[moduleToRemove.id] && require.cache[moduleToRemove.id].children) || [];
+          modulesToRemove = modulesToRemove.concat(children);
           // Delete the module from the cache.
           delete require.cache[moduleToRemove.id];
         }
