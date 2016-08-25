@@ -40,6 +40,8 @@ module.exports = {
 
   fn: function(inputs, exits) {
 
+    throw new Error('Doing this in the next commit');
+
     // Import `object-hash` as `hashFn`.
     var hashFn = require('object-hash');
 

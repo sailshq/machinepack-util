@@ -40,8 +40,8 @@ module.exports = {
     var util = require('util');
 
     // Import the `isError` and `isObject` Lodash functions.
-    var isError = require('lodash.iserror');
-    var isObject = require('lodash.isobject');
+    var isError = require('lodash').isError;
+    var isObject = require('lodash').isObject;
 
     // If the value is an error, output its stack through the `success` exit.
     if (isError(inputs.value)) {
