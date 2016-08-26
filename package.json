@@ -29,8 +29,8 @@
     "url": "git@github.com:treelinehq/machinepack-util.git"
   },
   "devDependencies": {
-    "mocha": "2.1.0",
-    "test-machinepack-mocha": "^2.1.1"
+    "mocha": "3.0.2",
+    "test-machinepack-mocha": "^2.1.6"
   },
   "machinepack": {
     "friendlyName": "Util",
