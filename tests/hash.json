@@ -60,6 +60,20 @@
     },
     {
       "using": {
+        "value": {"foo":"bar", "abc": 123}
+      },
+      "outcome": "success",
+      "returns": "900b407f53639b07439a489454047a90"
+    },
+    {
+      "using": {
+        "value": {"abc": 123, "foo":"bar"}
+      },
+      "outcome": "success",
+      "returns": "900b407f53639b07439a489454047a90"
+    },
+    {
+      "using": {
         "value": []
       },
       "outcome": "success",
