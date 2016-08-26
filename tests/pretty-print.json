@@ -1,0 +1,26 @@
+{
+  "machine": "pretty-print",
+  "expectations": [
+    {
+      "using": {
+        "value": "[ { \"stuff\": { \"foo\": \"bar\", \"baz\": [3] } } ]"
+      },
+      "outcome": "success",
+      "returns": "[ { stuff: { foo: 'bar', baz: [ 3 ] } } ]"
+    },
+    {
+      "using": {
+        "value": "13"
+      },
+      "outcome": "success",
+      "returns": "13"
+    },
+    {
+      "using": {
+        "value": "[[[[[[[[[[[[]]]]]]]]]]]]"
+      },
+      "outcome": "success",
+      "returns": "[ [ [ [ [ [ [ [ [ [ [ [] ] ] ] ] ] ] ] ] ] ] ]"
+    }
+  ]
+}
