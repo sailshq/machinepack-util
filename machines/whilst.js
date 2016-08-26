@@ -79,31 +79,53 @@ module.exports = {
     // Import `async`.
     var async = require('async');
 
+    // Put a reference to `inputs.initialData` into a var for convenience.
     var data = inputs.initialData;
 
+    // Use `async.during` to perform a fully asynchronous "while" loop
+    // (In `async.whilst`, the test must be performed synchronously).
     async.during(
+      // Perform the test.  If it passes, the operation will be performed.
+      // If it fails, the loop will terminate.
       function test(cb) {
         inputs.test({data: data}).exec({
+          // Test passed; return `true` to the callback so that
+          // the operation will run.
           success: function() {
             return cb(null, true);
           },
+          // Test failed; return `false` to the callback so that
+          // the loop will halt.
           stop: function() {
             return cb(null, false);
           },
+          // An unknown error occurred; this will short-circuit the loop.
           error: cb
         });
       },
+      // Perform the operation.
       function operation(cb) {
         inputs.operation({data: data}).exec({
+          // If the operation returned through its `success` exit,
+          // update the data and call the callback so that the
+          // test will be performed again.
           success: function(updatedData) {
             data = updatedData;
             return cb();
           },
+          // If the operation returned through its `error` exit,
+          // the output from that exit will be passed as the first
+          // argument to the callback, thus short-circuiting the loop.
           error: cb
         });
       },
+      // The loop has halted, one way or the other.
       function done(err) {
+        // If the loop halted due to an unknown error, leave
+        // through the `error` exit.
         if (err) {return exits.error(err);}
+        // Otherwise output the final state of the data through
+        // the `success` exit.
         return exits.success(data);
       }
     );
