@@ -45,6 +45,7 @@ module.exports = {
 
   fn: function(inputs, exits) {
 
+    // Import `crypto` and `lodash`.
     var crypto = require('crypto');
     var _ = require('lodash');
 
