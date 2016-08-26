@@ -40,11 +40,11 @@
     "machineDir": "machines/",
     "machines": [
       "hash",
-      "inspect",
       "guarantee",
       "require",
       "construct",
-      "whilst"
+      "whilst",
+      "pretty-print"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
