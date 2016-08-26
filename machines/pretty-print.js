@@ -1,10 +1,13 @@
 module.exports = {
 
 
-  friendlyName: 'Inspect',
+  friendlyName: 'Pretty print',
 
 
   description: 'Pretty-print any value into a more-readable string.',
+
+
+  extendedDescription: 'This is like `util.inspect()` from Node.js.',
 
 
   sync: true,
@@ -26,8 +29,12 @@ module.exports = {
   exits: {
 
     success: {
-      outputFriendlyName: 'Inspected value',
-      outputDescription: 'A prettified version of the input value.',
+      outputFriendlyName: 'Pretty value',
+      outputDescription: 'The pretty printed value.',
+      extendedDescription:
+      'If the value was an Error instance, it was converted to a string by grabbing its `stack` property.  '+
+      'Otherwise, `util.inspect()` was used.  If the value was an object of any kind (e.g. dictionary, array, '+
+      'a Date instance, whatever) `util.inspect()` is called with `{depth: null}`.',
       outputExample: '...[{\'foo\': [\'bar\']}]...'
     }
 
