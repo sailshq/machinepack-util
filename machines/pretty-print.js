@@ -4,7 +4,7 @@ module.exports = {
   friendlyName: 'Pretty print',
 
 
-  description: 'Pretty-print any value into a more-readable string.',
+  description: 'Pretty print any value into a more-readable string.',
 
 
   extendedDescription: 'This is like `util.inspect()` from Node.js.',
