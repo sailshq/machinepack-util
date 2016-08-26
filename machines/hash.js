@@ -4,10 +4,15 @@ module.exports = {
   friendlyName: 'Hash',
 
 
-  description: 'Generate unique string from the provided value.',
+  description: 'Generate a unique, deterministic string from the provided value.',
 
 
-  extendedDescription: 'Useful for checksums (error-checking) and hash keys (caching, etc.) Uses the crypto module from Node core via `object-hash` on NPM (see http://npmjs.org/package/object-hash)',
+  extendedDescription:
+  'Useful for checksums (error-checking) and hash keys (caching, etc.)  '+
+  'Uses the `crypto` module from Node core via the same strategy as in the machine runner itself,  '+
+  '(see http://npmjs.org/package/machine)\n'+
+  'Regardless of how deeply nested a dictionary is in the provided value, _key order does not matter_ '+
+  'when computing this hash string.',
 
 
   sync: true,
@@ -40,17 +45,46 @@ module.exports = {
 
   fn: function(inputs, exits) {
 
-    throw new Error('Doing this in the next commit');
+    var crypto = require('crypto');
+    var _ = require('lodash');
 
-    // Import `object-hash` as `hashFn`.
-    var hashFn = require('object-hash');
+    // --•
+    // At this point, since we can safely assume `inputs.value` has already been validated,
+    // we can safely trust that it is JSON-serializable.
 
-    // Hash the input value.
-    var hash = hashFn(inputs.value);
+    // Build a modified ("deep-ish") clone of this value with all of its keys sorted-- recursively deep.
+    var sortifiedValue = (function _sortKeysRecursive(val){
+
+      // --• misc
+      if (!_.isObject(val)) { return val; }
+
+      // --• array
+      if (_.isArray(val)) {
+        return _.map(val, function (item){
+          return _sortKeysRecursive(item);
+        });//</_.map()>
+      }
+
+      // --• dictionary
+      var sortedSubKeys = _.keys(val).sort();
+      return _.reduce(sortedSubKeys, function (memo, subKey) {
+        memo[subKey] = _sortKeysRecursive(val[subKey]);
+        return memo;
+      }, {});//</_.reduce()>
+
+    })(inputs.value);//</invoked self-calling recursive function :: _sortKeysRecursive()>
+
+    // Now encode that as a JSON string.
+    var sortedAndStringifiedValue = JSON.stringify(sortifiedValue);
+
+    // Finally, compute & return an MD5 hash.
+    var hash = crypto.createHash('md5').update(sortedAndStringifiedValue).digest('hex');
 
     // Return the result through the `success` exit.
     return exits.success(hash);
 
-  },
+  }
+
 
 };
+
