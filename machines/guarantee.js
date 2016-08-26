@@ -58,7 +58,7 @@ module.exports = {
     var retVal = typeof inputs.value !== 'undefined' ? inputs.value : inputs.defaultValue;
 
     // If the return value is still undefined, leave through the `notDefined` exit.
-    if (typeof retVal == 'undefined') {
+    if (typeof retVal === 'undefined') {
       return exits.notDefined();
     }
 
