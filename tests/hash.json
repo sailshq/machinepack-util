@@ -6,35 +6,35 @@
         "value": "\"{\\\"some\\\": [{\\\"big\\\": {\\\"mama: [\\\"jama\\\"]}}]}\""
       },
       "outcome": "success",
-      "returns": "d49d79f6e52adc33f4300005b0f14b13"
+      "returns": "bdeb4b2ac72fc809506791b5e06e79757dc04ac0"
     },
     {
       "using": {
         "value": "\"something else\""
       },
       "outcome": "success",
-      "returns": "31e9ea65b4998c479b32607e0ef7f0cd"
+      "returns": "c36c5c5fc2ab67ac0379acadfd815afbe5ba6b70"
     },
     {
       "using": {
         "value": true
       },
       "outcome": "success",
-      "returns": "b326b5062b2f0e69046810717534cb09"
+      "returns": "5ffe533b830f08a0326348a9160afafc8ada44db"
     },
     {
       "using": {
         "value": false
       },
       "outcome": "success",
-      "returns": "68934a3e9455fa72420237eb05902327"
+      "returns": "7cb6efb98ba5972a9b5090dc2e517fe14d12cb04"
     },
     {
       "using": {
         "value": 293528
       },
       "outcome": "success",
-      "returns": "c60dfcabb7215a04bfe46920ecb15d3d"
+      "returns": "16e8a0ef1841c0aa69058369ba50c97a63d70d7c"
     },
     {
       "using": {
@@ -45,7 +45,7 @@
         ]
       },
       "outcome": "success",
-      "returns": "c29a5747d698b2f95cdfd5ed6502f19d"
+      "returns": "e13460afb1e68af030bb9bee8344c274494661fa"
     },
     {
       "using": {
@@ -56,35 +56,35 @@
         ]
       },
       "outcome": "success",
-      "returns": "f1e46f328e6decd56c64dd5e761dc2b7"
+      "returns": "9ef50cc82ae474279fb8e82896142702bccbb33a"
     },
     {
       "using": {
         "value": {"foo":"bar", "abc": 123}
       },
       "outcome": "success",
-      "returns": "900b407f53639b07439a489454047a90"
+      "returns": "4380ba8e65fe53fd4f7e131e60b10b18d0d29591"
     },
     {
       "using": {
         "value": {"abc": 123, "foo":"bar"}
       },
       "outcome": "success",
-      "returns": "900b407f53639b07439a489454047a90"
+      "returns": "4380ba8e65fe53fd4f7e131e60b10b18d0d29591"
     },
     {
       "using": {
         "value": []
       },
       "outcome": "success",
-      "returns": "d751713988987e9331980363e24189ce"
+      "returns": "97d170e1550eee4afc0af065b78cda302a97674c"
     },
     {
       "using": {
         "value": {}
       },
       "outcome": "success",
-      "returns": "99914b932bd37a50b983c5e7c90ae93b"
+      "returns": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f"
     }
   ]
 }

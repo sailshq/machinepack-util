@@ -45,8 +45,10 @@ module.exports = {
 
   fn: function(inputs, exits) {
 
-    // Import `crypto` and `lodash`.
-    var crypto = require('crypto');
+    // Import SHA1 encryptor from `crypto-js`.
+    var crypto = require('crypto-js/sha1');
+
+    // Import `lodash`.
     var _ = require('lodash');
 
     // --•
@@ -78,8 +80,8 @@ module.exports = {
     // Now encode that as a JSON string.
     var sortedAndStringifiedValue = JSON.stringify(sortifiedValue);
 
-    // Finally, compute & return an MD5 hash.
-    var hash = crypto.createHash('md5').update(sortedAndStringifiedValue).digest('hex');
+    // Finally, compute & return a SHA1 hash.
+    var hash = crypto(sortedAndStringifiedValue).toString();
 
     // Return the result through the `success` exit.
     return exits.success(hash);
