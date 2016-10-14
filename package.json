@@ -23,7 +23,8 @@
     "crypto-js": "3.1.6",
     "lodash": "3.10.1",
     "machine": "^13.0.0-11",
-    "resolve": "1.1.7"
+    "resolve": "1.1.7",
+    "rttc": "^9.8.2"
   },
   "repository": {
     "type": "git",

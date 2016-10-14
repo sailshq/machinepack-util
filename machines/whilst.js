@@ -76,11 +76,16 @@ module.exports = {
 
   fn: function(inputs, exits) {
 
-    // Import `async`.
+    // Import `async` and `rttc`.
     var async = require('async');
+    var rttc = require('rttc');
 
     // Put a reference to `inputs.initialData` into a var for convenience.
     var data = inputs.initialData;
+
+    // Get an exemplar of the initial value so that we can coerce any
+    // updated data to be the same type after each iteration.
+    var initialValueTypeSchema = rttc.infer(rttc.coerceExemplar(inputs.initialData));
 
     // Use `async.during` to perform a fully asynchronous "while" loop
     // (In `async.whilst`, the test must be performed synchronously).
@@ -110,8 +115,12 @@ module.exports = {
           // update the data and call the callback so that the
           // test will be performed again.
           success: function(updatedData) {
-            data = updatedData;
+
+            // Keep track of accumulated result so far, and make sure it validates
+            // against the initial value's type.
+            data = rttc.coerce(initialValueTypeSchema, updatedData);
             return cb();
+
           },
           // If the operation returned through its `error` exit,
           // the output from that exit will be passed as the first
