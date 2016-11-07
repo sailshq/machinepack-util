@@ -1,0 +1,20 @@
+{
+  "machine": "get-calculated-value",
+  "expectations": [
+    {
+      "using": {
+        "resultExemplar": "foobar",
+        "getter": "function(inputs, exits) {return exits.success('lala land');}"
+      },
+      "outcome": "success",
+      "returns": "lala land"
+    },
+    {
+      "using": {
+        "resultExemplar": "foobar",
+        "getter": "function(inputs, exits) {return throw new Error('whoops');}"
+      },
+      "outcome": "error"
+    }
+  ]
+}

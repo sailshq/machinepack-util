@@ -43,7 +43,8 @@
       "require",
       "construct",
       "whilst",
-      "pretty-print"
+      "pretty-print",
+      "get-calculated-value"
     ],
     "testsUrl": "https://travis-ci.org/treelinehq/machinepack-util"
   }
