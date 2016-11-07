@@ -17,7 +17,6 @@ module.exports = {
     },
 
     getter: {
-      friendlyName: 'Getter',
       description: 'The machine used to calculate the value.',
       example: '->',
       contract: {
